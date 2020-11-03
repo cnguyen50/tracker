@@ -1,7 +1,10 @@
 require('dotenv').config()
 const express = require('express')
 const mongoose = require('mongoose')
+const authRoutes = require('./routes/authRoutes')
+
 const app = express()
+app.use(authRoutes)
 
 const monogoUri = process.env.DB_KEY;
 
