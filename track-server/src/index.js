@@ -1,9 +1,23 @@
 require('dotenv').config()
 const express = require('express')
-
+const mongoose = require('mongoose')
 const app = express()
 
 const monogoUri = process.env.DB_KEY;
+
+mongoose.connect(monogoUri, {
+  useNewUrlParser: true,
+  useCreateIndex: true
+})
+
+mongoose.connection.on('connected', () => {
+  console.log("Connected to mongo")
+})
+
+
+mongoose.connection.on('error', (err) => {
+  console.error("Connected to mongo", err)
+})
 
 app.get('/', (req, res) => {
   res.send(`${monogoUri}`)
