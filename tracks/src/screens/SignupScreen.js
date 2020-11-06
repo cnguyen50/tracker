@@ -4,6 +4,7 @@ import { Text, Input, Button } from 'react-native-elements'
 import Spacer from '../components/Spacer'
 import { Context as AuthContext } from '../context/AuthContext'
 import AuthForm from '../components/AuthForm'
+import NavLink from '../components/NavLink'
 
 const SignupScreen = ({ navigation }) => {
   const { state, signup } = useContext(AuthContext)
@@ -15,6 +16,10 @@ const SignupScreen = ({ navigation }) => {
         errorMessage={state.errorMessage}
         submitButtonText="Sign Up"
         onSubmit={signup}
+      />
+      <NavLink 
+        routeName="Signin"
+        text="Already have an account? Sign in instead"
       />
     </View>
   )
