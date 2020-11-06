@@ -16,13 +16,6 @@ const SignupScreen = ({ navigation }) => {
         submitButtonText="Sign Up"
         onSubmit={signup}
       />
-      <TouchableOpacity onPress={() => navigation.navigate('Signin')}>
-        <Spacer>
-          <Text style={styles.link}>
-            Already have an account? Sign in here
-          </Text>
-        </Spacer>
-      </TouchableOpacity>
     </View>
   )
 }
@@ -38,9 +31,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     marginBottom: 250
-  },
-  link: {
-    color: 'blue'
   }
 })
 
