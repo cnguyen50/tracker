@@ -19,7 +19,8 @@ const monogoUri = process.env.DB_KEY;
 
 mongoose.connect(monogoUri, {
   useNewUrlParser: true,
-  useCreateIndex: true
+  useCreateIndex: true,
+  useUnifiedTopology: true
 })
 
 mongoose.connection.on('connected', () => {
