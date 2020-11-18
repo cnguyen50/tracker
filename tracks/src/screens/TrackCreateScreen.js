@@ -1,4 +1,4 @@
-import '../_mockLocation'
+//import '../_mockLocation'
 import React, { useEffect, useState } from 'react';
 import { StyleSheet } from 'react-native';
 import Map from '../components/Map'
