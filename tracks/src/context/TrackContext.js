@@ -1,4 +1,3 @@
-import CreateDataContext from './createDataContext'
 import createDataContext from './createDataContext'
 
 const trackReducer = (state, action) => {
@@ -9,11 +8,12 @@ const trackReducer = (state, action) => {
 }
 
 const fetchTrack = dispatch => () => {}
-const createTrack = dispatch => () => {}
+const createTrack = dispatch => (name, locations) => {console.log(name, locations.length)}
 
-export const { Provider, COntext } = createDataContext(
+export const { Provider, Context } = createDataContext(
   trackReducer, {
     fetchTrack,
     createTrack
-  }
+  },
+  []
 )
