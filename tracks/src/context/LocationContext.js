@@ -21,7 +21,7 @@ const changeName = dispatch => (name) => {
   dispatch({ type: 'change_name', payload: name })
 }
 
-const startRecording = dispatch => () => { dispatch({ type: 'stop_recording'})}
+const startRecording = dispatch => () => { dispatch({ type: 'start_recording'})}
 const stopRecording = dispatch => () => { dispatch({ type: 'stop_recording'})}
 
 const addLocation = dispatch => (location, recording) => {
