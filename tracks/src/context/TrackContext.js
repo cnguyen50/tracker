@@ -10,7 +10,6 @@ const trackReducer = (state, action) => {
 
 const fetchTrack = dispatch => () => {}
 const createTrack = dispatch => async (name, locations) => {
-  console.log("test")
   await trackerApi.post('/tracks', { name, locations })
 }
 
