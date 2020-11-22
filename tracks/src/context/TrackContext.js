@@ -10,7 +10,7 @@ const trackReducer = (state, action) => {
   }
 }
 
-const fetchTrack = dispatch => async () => {
+const fetchTracks = dispatch => async () => {
   const response = await trackerApi.get('/tracks')
   dispatch({ type: 'fetch_tracks', payload: response.data })
 }
@@ -21,7 +21,7 @@ const createTrack = dispatch => async (name, locations) => {
 
 export const { Provider, Context } = createDataContext(
   trackReducer, {
-    fetchTrack,
+    fetchTracks,
     createTrack
   },
   []
