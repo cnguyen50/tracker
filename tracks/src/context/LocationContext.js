@@ -2,8 +2,8 @@ import createDataContext from './createDataContext'
 
 const locationReducer = (state, action) => {
   switch (action.type) {
-    case 'add_cuurent_location':
-      return { ...state, currentLoaction: action.payload }
+    case 'add_current_location':
+      return { ...state, currentLocation: action.payload }
     default:
       return state
   }
