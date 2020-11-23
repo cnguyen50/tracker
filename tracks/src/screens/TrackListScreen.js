@@ -30,7 +30,7 @@ const TrackListScreen = ({ navigation }) => {
   );
 };
 
-TrackListScreen.navigationOptions = () => {
+TrackListScreen.navigationOptions = {
   title: 'Tracks'
 }
 
